@@ -2,7 +2,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const cacheRouter = require('./routes/cache.route');
+const customersRouter = require('./routes/customers.route');
 
 const app = express();
 
@@ -11,6 +11,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/cache', cacheRouter);
+app.use('/api/customers', customersRouter);
 
 module.exports = app;

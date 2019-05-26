@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const cacheController = require('../controllers/cache.controller');
+const customersController = require('../controllers/customers.controller');
 
 router.get('/', (req, res, next) => {
-    cacheController.getAllUser()
+    customersController.getAllUser()
         .then(response => {
             res.send({
                 success: true,
@@ -18,7 +18,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/:id', (req, res, next) => {
-    cacheController.getUser(req.params.id)
+    customersController.getUser(req.params.id)
         .then(response => {
             res.send({
                 success: true,
@@ -33,7 +33,7 @@ router.get('/:id', (req, res, next) => {
 });
 
 router.delete('/:id', (req, res, next) => {
-    cacheController.delUser(req.params.id)
+    customersController.delUser(req.params.id)
         .then(response => {
             res.send({
                 success: true,

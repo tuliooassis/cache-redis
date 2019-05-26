@@ -17,14 +17,14 @@ docker-compose up
 - Pronto
 
 ## Endpoints
-[Acessar Postman Collection](https://www.getpostman.com/collections/af3d27a481cf00e24a1b)
+[Acessar Postman Collection](https://www.getpostman.com/collections/afe5440f4e4176cc8107)
 
-#### Cache
-- **<code>GET</code> cache/:id**
+#### Customers
+- **<code>GET</code> api/customers/:id**
 Verifica se o usuário pode ou não ser impactado por uma pesquisa.
 
 ##### Exemplo
-GET /cache/01234567890
+GET /api/customers/01234567890
 ##### Retorno
 ````
 {
@@ -44,10 +44,10 @@ ou
 }
 ````
 
-- **<code>GET</code> cache**
+- **<code>GET</code> api/customers**
 Retorna todos os usuários presentes na cache, ou seja, todos os usuários que não devem ser impactados pela pesquisa.
 ##### Exemplo
-GET /cache
+GET /api/customers
 ##### Retorno
 ````
 {
@@ -58,10 +58,10 @@ GET /cache
 }
 ````
 
-- **<code>DEL</code> cache/:id**
+- **<code>DEL</code> api/customers/:id**
 Deleta o usuário da cache, permitindo que ele seja impactado pela pesquisa.
 ##### Exemplo
-DEL /cache/01234567890
+DEL /api/customers/01234567890
 ##### Retorno
 ````
 {
