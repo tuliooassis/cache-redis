@@ -10,7 +10,7 @@ router.get('/', (req, res, next) => {
                 result: response
             })
         }).catch(err => {
-            res.send({
+            res.status(500).send({
                 success: false,
                 result: err
             })
@@ -25,7 +25,7 @@ router.get('/:id', (req, res, next) => {
                 result: response
             })
         }).catch(err => {
-            res.send({
+            res.status(500).send({
                 success: false,
                 result: err
             })
@@ -40,7 +40,7 @@ router.delete('/:id', (req, res, next) => {
                 result: response
             })
         }).catch(err => {
-            res.send({
+            res.status(500).send({
                 success: false,
                 result: err
             })
