@@ -1,6 +1,6 @@
 const redis = require('redis');
 const client = redis.createClient(process.env.REDIS_URL);
-const TIME = 60;
+const TIME = 7776000;
 
 exports.set = (id) => {
     return new Promise((resolve, reject) => {
