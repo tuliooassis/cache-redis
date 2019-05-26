@@ -29,4 +29,11 @@ exports.getAll = () => {
     });
 }
 
-
+exports.del = (id) => {
+    return new Promise((resolve, reject) => {
+        client.del(id, (err, reply) => {
+            if (err) reject(err);
+            resolve(reply);
+        });
+    });
+}

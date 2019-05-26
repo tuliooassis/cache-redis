@@ -25,3 +25,13 @@ exports.getUser = (id) => {
 		});
 	});
 };
+
+exports.delUser = (id) => {
+	return new Promise((resolve, reject) => {
+		redisService.del(id).then(response => {
+			resolve(response);
+		}).catch(err => {
+			reject(err);
+		});
+	});
+};

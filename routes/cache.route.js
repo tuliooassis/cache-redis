@@ -32,4 +32,19 @@ router.get('/:id', (req, res, next) => {
         });
 });
 
+router.delete('/:id', (req, res, next) => {
+    cacheController.delUser(req.params.id)
+        .then(response => {
+            res.send({
+                success: true,
+                result: response
+            })
+        }).catch(err => {
+            res.send({
+                success: false,
+                result: err
+            })
+        });
+});
+
 module.exports = router;
