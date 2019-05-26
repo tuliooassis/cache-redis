@@ -17,3 +17,14 @@ app:
     - PORT=3000
   command:
     sh -c 'npm i && node ./bin/www'
+test:
+  build: ./
+  volumes:
+    - ./:/var/www/app
+  links:
+    - redis
+    - app
+  environment:
+    - REDIS_URL=redis://cache
+  command:
+    sh -c 'npm test'
