@@ -3,6 +3,10 @@ const customersController = require('../controllers/customers.controller');
 const ID = 'ID-USER-TEST';
 
 describe('Customers', () => {
+    after(() => {
+		customersController.delUser(ID);
+	});
+	
 	it('Deveria retornar true quando a cache não conter o ID', (done) => {
 		customersController.delUser(ID);
 		customersController.getUser(ID).then(res => {
