@@ -21,11 +21,14 @@ docker-compose up
 
 #### Customers
 - **<code>GET</code> api/customers/:id**
+
 Verifica se o usuário pode ou não ser impactado por uma pesquisa.
 
 ##### Exemplo
 GET /api/customers/01234567890
+
 ##### Retorno
+Caso o usuário possa ser impactado pela pesquisa
 ````
 {
     "success": true,
@@ -35,6 +38,8 @@ GET /api/customers/01234567890
 }
 ````
 ou
+
+Caso o usuário não possa ser impactado pela pesquisa
 ````
 {
     "success": true,
@@ -45,9 +50,11 @@ ou
 ````
 
 - **<code>GET</code> api/customers**
+
 Retorna todos os usuários presentes na cache, ou seja, todos os usuários que não devem ser impactados pela pesquisa.
 ##### Exemplo
 GET /api/customers
+
 ##### Retorno
 ````
 {
@@ -59,6 +66,7 @@ GET /api/customers
 ````
 
 - **<code>DEL</code> api/customers/:id**
+
 Deleta o usuário da cache, permitindo que ele seja impactado pela pesquisa.
 ##### Exemplo
 DEL /api/customers/01234567890
