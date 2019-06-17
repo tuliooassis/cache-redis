@@ -1,4 +1,4 @@
-# tracksale-test
+# Cache com Redis
 Aplicação desenvolvida para a 1ª etapa do processo de seleção da Tracksale.
 
 ## Introdução
