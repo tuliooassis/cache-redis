@@ -1,5 +1,4 @@
 # Cache com Redis
-Aplicação desenvolvida para a 1ª etapa do processo de seleção da Tracksale.
 
 ## Introdução
 Foi implementado uma aplicação com o uso de cache com ``redis`` e testes unitários com ``mocha``. 
